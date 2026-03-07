@@ -59,6 +59,7 @@ builder.Services.AddAuthentication(options =>
 // Application Services kaydı (Dependency Injection)
 builder.Services.AddScoped<IAssignmentService, AssignmentService>();
 builder.Services.AddScoped<IScheduleService, ScheduleService>();
+builder.Services.AddScoped<ITokenService, TokenService>();
 
 var app = builder.Build();
 
