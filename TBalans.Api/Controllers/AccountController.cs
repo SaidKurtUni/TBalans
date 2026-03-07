@@ -35,11 +35,11 @@ public class AccountController : ControllerBase
             // Clean Architecture kurgusu: Username olarak email'i kullan veya kullanıcıdan al.
             var user = new User(
                 photoUrl: request.PhotoUrl ?? "",
-                avatarType: request.AvatarType,
+                avatarType: (int)request.AvatarType,
                 university: request.University,
                 department: request.Department,
                 academicYear: request.AcademicYear,
-                semester: request.Semester
+                semester: (int)request.Semester
             )
             {
                 UserName = request.Email, // Identity standart

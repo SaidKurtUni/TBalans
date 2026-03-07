@@ -13,53 +13,53 @@ public class User : IdentityUser<Guid>
     /// <summary>
     /// Kullanıcının profil fotoğrafı bağlantısı
     /// </summary>
-    public string PhotoUrl { get; private set; } = default!;
+    public string? PhotoUrl { get; set; }
 
     /// <summary>
     /// Kullanıcının avatar tercihi (Harf, İkon veya Özel resim)
     /// </summary>
-    public AvatarType AvatarType { get; private set; }
+    public int AvatarType { get; set; }
 
     /// <summary>
     /// Kullanıcının kayıtlı olduğu üniversite
     /// </summary>
-    public string University { get; private set; } = default!;
+    public string? University { get; set; }
 
     /// <summary>
     /// Kullanıcının bölümü
     /// </summary>
-    public string Department { get; private set; } = default!;
+    public string? Department { get; set; }
 
     /// <summary>
     /// Kullanıcının sistemdeki itibarı (Rozet kilitlerini açmak için)
     /// </summary>
-    public int KarmaPoints { get; private set; }
+    public int KarmaPoints { get; set; }
 
     /// <summary>
     /// Üniversite mirası (Arşivleme) için akademik yıl (Örn: "2025-2026")
     /// </summary>
-    public string AcademicYear { get; private set; } = default!;
+    public string? AcademicYear { get; set; }
 
     /// <summary>
     /// Üniversite mirası (Arşivleme) için eğitim dönemi (Güz/Bahar)
     /// </summary>
-    public Semester Semester { get; private set; }
+    public int Semester { get; set; }
 
     // Parametresiz kurucu metot (ORM araçları için)
     protected User() { }
 
     public User(
-        string photoUrl,
-        AvatarType avatarType,
-        string university = "Bandırma 17 Eylül",
-        string department = "Yazılım Mühendisliği",
-        string academicYear = "",
-        Semester semester = Semester.Fall)
+        string? photoUrl,
+        int avatarType,
+        string? university = "Bandırma Onyedi Eylül Üniversitesi",
+        string? department = "Yazılım Mühendisliği",
+        string? academicYear = "",
+        int semester = 0)
     {
         Id = Guid.NewGuid();
         PhotoUrl = photoUrl;
         AvatarType = avatarType;
-        University = string.IsNullOrWhiteSpace(university) ? "Bandırma 17 Eylül" : university;
+        University = string.IsNullOrWhiteSpace(university) ? "Bandırma Onyedi Eylül Üniversitesi" : university;
         Department = string.IsNullOrWhiteSpace(department) ? "Yazılım Mühendisliği" : department;
         KarmaPoints = 0; // Yeni kayıt olan kullanıcının karması sıfırdan başlar
         AcademicYear = academicYear;

@@ -236,7 +236,6 @@ namespace TBalans.Infrastructure.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("AcademicYear")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int>("AccessFailedCount")
@@ -250,7 +249,6 @@ namespace TBalans.Infrastructure.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Department")
-                        .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT")
                         .HasDefaultValue("Yazılım Mühendisliği");
@@ -289,7 +287,6 @@ namespace TBalans.Infrastructure.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("PhotoUrl")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("SecurityStamp")
@@ -303,7 +300,6 @@ namespace TBalans.Infrastructure.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("University")
-                        .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT")
                         .HasDefaultValue("Bandırma Onyedi Eylül Üniversitesi");

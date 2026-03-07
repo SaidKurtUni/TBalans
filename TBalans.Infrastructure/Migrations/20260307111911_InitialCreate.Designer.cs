@@ -11,8 +11,8 @@ using TBalans.Infrastructure;
 namespace TBalans.Infrastructure.Migrations
 {
     [DbContext(typeof(TBalansDbContext))]
-    [Migration("20260307081434_AddIdentity")]
-    partial class AddIdentity
+    [Migration("20260307111911_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -239,7 +239,6 @@ namespace TBalans.Infrastructure.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("AcademicYear")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int>("AccessFailedCount")
@@ -253,7 +252,6 @@ namespace TBalans.Infrastructure.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Department")
-                        .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT")
                         .HasDefaultValue("Yazılım Mühendisliği");
@@ -292,7 +290,6 @@ namespace TBalans.Infrastructure.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("PhotoUrl")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("SecurityStamp")
@@ -306,7 +303,6 @@ namespace TBalans.Infrastructure.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("University")
-                        .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT")
                         .HasDefaultValue("Bandırma Onyedi Eylül Üniversitesi");

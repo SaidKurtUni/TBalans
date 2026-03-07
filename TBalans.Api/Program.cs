@@ -62,6 +62,7 @@ builder.Services.AddScoped<IScheduleService, ScheduleService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 
 var app = builder.Build();
+app.UseDeveloperExceptionPage();
 
 // Configure the HTTP request pipeline.
 
