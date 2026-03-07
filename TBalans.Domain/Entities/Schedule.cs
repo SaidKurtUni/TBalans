@@ -52,6 +52,26 @@ public class Schedule
     /// </summary>
     public Guid UserId { get; private set; }
 
+    /// <summary>
+    /// Takvim bilgisinin geçerli olmaya başladığı başlangıç tarihi (Dönem başlangıcı vb.)
+    /// </summary>
+    public DateTime? EffectiveStartDate { get; private set; }
+
+    /// <summary>
+    /// Takvim bilgisinin bitiş tarihi (Dönem sonu vb.)
+    /// </summary>
+    public DateTime? EffectiveEndDate { get; private set; }
+
+    /// <summary>
+    /// Dersin ya da sınavın o hafta/gün için iptal edilip edilmediği
+    /// </summary>
+    public bool IsCancelled { get; private set; }
+
+    /// <summary>
+    /// Belirli haftalarda tekrarlanan (örn. "2,4,6,8. haftalar") özel durumlar için virgülle ayrılmış haftalar (opsiyonel)
+    /// </summary>
+    public string? OccursOnSpecificWeeks { get; private set; }
+
     // ORM (Entity Framework) için parametresiz kurucu
     protected Schedule() { }
 
@@ -63,7 +83,10 @@ public class Schedule
         DayOfWeek dayOfWeek,
         bool isExam,
         string location,
-        Guid userId)
+        Guid userId,
+        DateTime? effectiveStartDate = null,
+        DateTime? effectiveEndDate = null,
+        string? occursOnSpecificWeeks = null)
     {
         if (string.IsNullOrWhiteSpace(title))
             throw new ArgumentException("Takvim başlığı boş olamaz.", nameof(title));
@@ -80,5 +103,18 @@ public class Schedule
         IsExam = isExam;
         Location = location;
         UserId = userId;
+
+        EffectiveStartDate = effectiveStartDate;
+        EffectiveEndDate = effectiveEndDate;
+        OccursOnSpecificWeeks = occursOnSpecificWeeks;
+        IsCancelled = false; // Varsayılan olarak iptal edilmemiştir
+    }
+
+    /// <summary>
+    /// İptal durumunu günceller.
+    /// </summary>
+    public void SetCancelledStatus(bool isCancelled)
+    {
+        IsCancelled = isCancelled;
     }
 }
