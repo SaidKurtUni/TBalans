@@ -8,7 +8,7 @@ using TBalans.Infrastructure;
 
 namespace TBalans.Application.Services;
 
-public class ScheduleService : IScheduleService
+public partial class ScheduleService : IScheduleService
 {
     private readonly TBalansDbContext _context;
 
@@ -23,8 +23,8 @@ public class ScheduleService : IScheduleService
 
         // 1. Kullanıcının o haftaya ait (Effective Dates içine düşen) veya genelde geçerli tüm ders programını çekiyoruz
         var allSchedules = await _context.Schedules
-            .Where(s => s.UserId == userId 
-                && !s.IsCancelled 
+            .Where(s => s.UserId == userId
+                && !s.IsCancelled
                 // Either no effective date OR the week intersects with effective dates
                 && (!s.EffectiveStartDate.HasValue || s.EffectiveStartDate <= weekEndDate)
                 && (!s.EffectiveEndDate.HasValue || s.EffectiveEndDate >= weekStartDate))

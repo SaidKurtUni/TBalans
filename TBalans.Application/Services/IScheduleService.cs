@@ -8,7 +8,7 @@ namespace TBalans.Application.Services;
 /// <summary>
 /// Kullanıcının haftalık takvim/ders programı (Schedule) ile ilgili iş kurallarını barındıran servis arayüzü.
 /// </summary>
-public interface IScheduleService
+public partial interface IScheduleService
 {
     /// <summary>
     /// Belirtilen kullanıcı için, istenen haftaya ait "Akıllı Esnek Programı" (Flexible Schedule) getirir.
