@@ -11,6 +11,7 @@ public class TBalansDbContext : DbContext
 {
     public DbSet<User> Users { get; set; }
     public DbSet<Assignment> Assignments { get; set; }
+    public DbSet<Schedule> Schedules { get; set; }
 
     // Parametresiz kurucu - Migration komutlarında gerekebilir
     public TBalansDbContext() { }
