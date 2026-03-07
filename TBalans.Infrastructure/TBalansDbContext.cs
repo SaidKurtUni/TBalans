@@ -12,7 +12,6 @@ namespace TBalans.Infrastructure;
 /// </summary>
 public class TBalansDbContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
 {
-    public DbSet<User> Users { get; set; }
     public DbSet<Assignment> Assignments { get; set; }
     public DbSet<Schedule> Schedules { get; set; }
 

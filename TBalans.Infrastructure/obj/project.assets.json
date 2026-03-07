@@ -3310,11 +3310,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\TBalans\\TBalans.Infrastructure\\TBalans.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\Tbalans\\TBalans.Infrastructure\\TBalans.Infrastructure.csproj",
       "projectName": "TBalans.Infrastructure",
-      "projectPath": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\TBalans\\TBalans.Infrastructure\\TBalans.Infrastructure.csproj",
+      "projectPath": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\Tbalans\\TBalans.Infrastructure\\TBalans.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\KURTS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\TBalans\\TBalans.Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\Tbalans\\TBalans.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\KURTS\\AppData\\Roaming\\NuGet\\NuGet.Config"
