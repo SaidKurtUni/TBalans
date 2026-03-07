@@ -24,4 +24,12 @@ public interface IAssignmentService
     /// <param name="newAssignment">Eklenecek yeni görev nesnesi</param>
     /// <returns>İşlem başarılıysa eklenen görevi döner</returns>
     Task<Assignment> AddAssignmentAsync(Assignment newAssignment);
+    /// <summary>
+    /// Verilen tarih aralığındaki görevleri (Assignment) takvim formatında (CalendarEventDto) getirir.
+    /// Başlangıç tarihi hesaplanırken EstimatedHours değeri kullanılır.
+    /// </summary>
+    /// <param name="start">Filtreleme için başlangıç tarihi</param>
+    /// <param name="end">Filtreleme için bitiş tarihi</param>
+    /// <returns>Takvim olayları listesi</returns>
+    Task<System.Collections.Generic.List<DTOs.CalendarEventDto>> GetCalendarEventsAsync(DateTime start, DateTime end);
 }
