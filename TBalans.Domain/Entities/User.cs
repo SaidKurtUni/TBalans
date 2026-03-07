@@ -1,19 +1,15 @@
 using System;
+using Microsoft.AspNetCore.Identity;
 using TBalans.Domain.Enums;
 
 namespace TBalans.Domain.Entities;
 
 /// <summary>
 /// Sistemdeki kullanıcıları temsil eden varlık sınıfı.
-/// Clean Architecture ve OOP prensiplerine uygun olarak tasarlanmıştır.
+/// Clean Architecture, OOP ve ASP.NET Identity prensiplerine uygun olarak tasarlanmıştır.
 /// </summary>
-public class User
+public class User : IdentityUser<Guid>
 {
-    /// <summary>
-    /// Kullanıcının benzersiz kimliği
-    /// </summary>
-    public Guid Id { get; private set; }
-
     /// <summary>
     /// Kullanıcının profil fotoğrafı bağlantısı
     /// </summary>

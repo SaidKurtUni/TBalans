@@ -1,4 +1,7 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System;
 using TBalans.Domain.Entities;
 using TBalans.Domain.Enums;
 
@@ -7,7 +10,7 @@ namespace TBalans.Infrastructure;
 /// <summary>
 /// Uygulamanın veritabanı erişim bağlamı. Fluent API ayarlarını ve veri kümelerini içerir.
 /// </summary>
-public class TBalansDbContext : DbContext
+public class TBalansDbContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
 {
     public DbSet<User> Users { get; set; }
     public DbSet<Assignment> Assignments { get; set; }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TBalans.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4744d11c9c01386a94014c0265a4520865fae3ee")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a3dfd3349e7aa04f2fbead4fba91057959fd1949")]
 [assembly: System.Reflection.AssemblyProductAttribute("TBalans.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TBalans.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

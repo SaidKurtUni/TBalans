@@ -10,3 +10,4 @@ C:\Users\KURTS\OneDrive\Desktop\Yeni klasör\TBalans\TBalans.Domain\obj\Debug\ne
 C:\Users\KURTS\OneDrive\Desktop\Yeni klasör\TBalans\TBalans.Domain\obj\Debug\net9.0\refint\TBalans.Domain.dll
 C:\Users\KURTS\OneDrive\Desktop\Yeni klasör\TBalans\TBalans.Domain\obj\Debug\net9.0\TBalans.Domain.pdb
 C:\Users\KURTS\OneDrive\Desktop\Yeni klasör\TBalans\TBalans.Domain\obj\Debug\net9.0\ref\TBalans.Domain.dll
+C:\Users\KURTS\OneDrive\Desktop\Yeni klasör\TBalans\TBalans.Domain\obj\Debug\net9.0\TBalans.Domain.csproj.AssemblyReference.cache

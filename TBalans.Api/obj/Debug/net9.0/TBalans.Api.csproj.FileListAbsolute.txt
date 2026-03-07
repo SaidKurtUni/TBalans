@@ -160,3 +160,16 @@ C:\Users\KURTS\OneDrive\Desktop\Yeni klasör\TBalans\TBalans.Api\obj\Debug\net9.
 C:\Users\KURTS\OneDrive\Desktop\Yeni klasör\TBalans\TBalans.Api\obj\Debug\net9.0\TBalans.Api.pdb
 C:\Users\KURTS\OneDrive\Desktop\Yeni klasör\TBalans\TBalans.Api\obj\Debug\net9.0\TBalans.Api.genruntimeconfig.cache
 C:\Users\KURTS\OneDrive\Desktop\Yeni klasör\TBalans\TBalans.Api\obj\Debug\net9.0\ref\TBalans.Api.dll
+C:\Users\KURTS\OneDrive\Desktop\Yeni klasör\TBalans\TBalans.Api\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\KURTS\OneDrive\Desktop\Yeni klasör\TBalans\TBalans.Api\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\KURTS\OneDrive\Desktop\Yeni klasör\TBalans\TBalans.Api\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\KURTS\OneDrive\Desktop\Yeni klasör\TBalans\TBalans.Api\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\KURTS\OneDrive\Desktop\Yeni klasör\TBalans\TBalans.Api\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\KURTS\OneDrive\Desktop\Yeni klasör\TBalans\TBalans.Api\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\KURTS\OneDrive\Desktop\Yeni klasör\TBalans\TBalans.Api\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\KURTS\OneDrive\Desktop\Yeni klasör\TBalans\TBalans.Api\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\KURTS\OneDrive\Desktop\Yeni klasör\TBalans\TBalans.Api\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\KURTS\OneDrive\Desktop\Yeni klasör\TBalans\TBalans.Api\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\KURTS\OneDrive\Desktop\Yeni klasör\TBalans\TBalans.Api\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\KURTS\OneDrive\Desktop\Yeni klasör\TBalans\TBalans.Api\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\KURTS\OneDrive\Desktop\Yeni klasör\TBalans\TBalans.Api\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll

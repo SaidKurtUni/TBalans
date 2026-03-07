@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TBalans.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+63c0d414e35fb2315307e3bd0afa2b98920689a2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a3dfd3349e7aa04f2fbead4fba91057959fd1949")]
 [assembly: System.Reflection.AssemblyProductAttribute("TBalans.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TBalans.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
