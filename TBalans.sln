@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TBalans.Infrastructure", "T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TBalans.Application", "TBalans.Application\TBalans.Application.csproj", "{AB089279-CBB4-4962-9C3B-478BCD6A83BF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TBalans.Api", "TBalans.Api\TBalans.Api.csproj", "{B5B5637C-BA47-441A-AABF-957522F985FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{AB089279-CBB4-4962-9C3B-478BCD6A83BF}.Release|x64.Build.0 = Release|Any CPU
 		{AB089279-CBB4-4962-9C3B-478BCD6A83BF}.Release|x86.ActiveCfg = Release|Any CPU
 		{AB089279-CBB4-4962-9C3B-478BCD6A83BF}.Release|x86.Build.0 = Release|Any CPU
+		{B5B5637C-BA47-441A-AABF-957522F985FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5B5637C-BA47-441A-AABF-957522F985FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5B5637C-BA47-441A-AABF-957522F985FC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B5B5637C-BA47-441A-AABF-957522F985FC}.Debug|x64.Build.0 = Debug|Any CPU
+		{B5B5637C-BA47-441A-AABF-957522F985FC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B5B5637C-BA47-441A-AABF-957522F985FC}.Debug|x86.Build.0 = Debug|Any CPU
+		{B5B5637C-BA47-441A-AABF-957522F985FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5B5637C-BA47-441A-AABF-957522F985FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5B5637C-BA47-441A-AABF-957522F985FC}.Release|x64.ActiveCfg = Release|Any CPU
+		{B5B5637C-BA47-441A-AABF-957522F985FC}.Release|x64.Build.0 = Release|Any CPU
+		{B5B5637C-BA47-441A-AABF-957522F985FC}.Release|x86.ActiveCfg = Release|Any CPU
+		{B5B5637C-BA47-441A-AABF-957522F985FC}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

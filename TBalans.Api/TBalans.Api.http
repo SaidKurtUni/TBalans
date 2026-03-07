@@ -1,0 +1,6 @@
+@TBalans.Api_HostAddress = http://localhost:5291
+
+GET {{TBalans.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
