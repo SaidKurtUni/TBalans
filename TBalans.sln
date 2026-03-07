@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TBalans.Domain", "TBalans.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TBalans.Infrastructure", "TBalans.Infrastructure\TBalans.Infrastructure.csproj", "{37D91A8D-0523-482F-A862-12BAC42745B5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TBalans.Application", "TBalans.Application\TBalans.Application.csproj", "{AB089279-CBB4-4962-9C3B-478BCD6A83BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,18 @@ Global
 		{37D91A8D-0523-482F-A862-12BAC42745B5}.Release|x64.Build.0 = Release|Any CPU
 		{37D91A8D-0523-482F-A862-12BAC42745B5}.Release|x86.ActiveCfg = Release|Any CPU
 		{37D91A8D-0523-482F-A862-12BAC42745B5}.Release|x86.Build.0 = Release|Any CPU
+		{AB089279-CBB4-4962-9C3B-478BCD6A83BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB089279-CBB4-4962-9C3B-478BCD6A83BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB089279-CBB4-4962-9C3B-478BCD6A83BF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{AB089279-CBB4-4962-9C3B-478BCD6A83BF}.Debug|x64.Build.0 = Debug|Any CPU
+		{AB089279-CBB4-4962-9C3B-478BCD6A83BF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AB089279-CBB4-4962-9C3B-478BCD6A83BF}.Debug|x86.Build.0 = Debug|Any CPU
+		{AB089279-CBB4-4962-9C3B-478BCD6A83BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB089279-CBB4-4962-9C3B-478BCD6A83BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB089279-CBB4-4962-9C3B-478BCD6A83BF}.Release|x64.ActiveCfg = Release|Any CPU
+		{AB089279-CBB4-4962-9C3B-478BCD6A83BF}.Release|x64.Build.0 = Release|Any CPU
+		{AB089279-CBB4-4962-9C3B-478BCD6A83BF}.Release|x86.ActiveCfg = Release|Any CPU
+		{AB089279-CBB4-4962-9C3B-478BCD6A83BF}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
