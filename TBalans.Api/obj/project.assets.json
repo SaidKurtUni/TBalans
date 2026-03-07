@@ -4080,11 +4080,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\TBalans\\TBalans.Api\\TBalans.Api.csproj",
+      "projectUniqueName": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\Tbalans\\TBalans.Api\\TBalans.Api.csproj",
       "projectName": "TBalans.Api",
-      "projectPath": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\TBalans\\TBalans.Api\\TBalans.Api.csproj",
+      "projectPath": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\Tbalans\\TBalans.Api\\TBalans.Api.csproj",
       "packagesPath": "C:\\Users\\KURTS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\TBalans\\TBalans.Api\\obj\\",
+      "outputPath": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\Tbalans\\TBalans.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\KURTS\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -4099,8 +4099,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\TBalans\\TBalans.Application\\TBalans.Application.csproj": {
-              "projectPath": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\TBalans\\TBalans.Application\\TBalans.Application.csproj"
+            "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\Tbalans\\TBalans.Application\\TBalans.Application.csproj": {
+              "projectPath": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\Tbalans\\TBalans.Application\\TBalans.Application.csproj"
             },
             "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\Tbalans\\TBalans.Infrastructure\\TBalans.Infrastructure.csproj": {
               "projectPath": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\Tbalans\\TBalans.Infrastructure\\TBalans.Infrastructure.csproj"

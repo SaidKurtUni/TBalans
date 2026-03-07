@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\TBalans\\TBalans.Application\\TBalans.Application.csproj": {}
+    "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\Tbalans\\TBalans.Application\\TBalans.Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\TBalans\\TBalans.Application\\TBalans.Application.csproj": {
+    "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\Tbalans\\TBalans.Application\\TBalans.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\TBalans\\TBalans.Application\\TBalans.Application.csproj",
+        "projectUniqueName": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\Tbalans\\TBalans.Application\\TBalans.Application.csproj",
         "projectName": "TBalans.Application",
-        "projectPath": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\TBalans\\TBalans.Application\\TBalans.Application.csproj",
+        "projectPath": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\Tbalans\\TBalans.Application\\TBalans.Application.csproj",
         "packagesPath": "C:\\Users\\KURTS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\TBalans\\TBalans.Application\\obj\\",
+        "outputPath": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\Tbalans\\TBalans.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\KURTS\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\TBalans\\TBalans.Domain\\TBalans.Domain.csproj": {
-                "projectPath": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\TBalans\\TBalans.Domain\\TBalans.Domain.csproj"
+              "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\Tbalans\\TBalans.Domain\\TBalans.Domain.csproj": {
+                "projectPath": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\Tbalans\\TBalans.Domain\\TBalans.Domain.csproj"
               },
               "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\Tbalans\\TBalans.Infrastructure\\TBalans.Infrastructure.csproj": {
                 "projectPath": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\Tbalans\\TBalans.Infrastructure\\TBalans.Infrastructure.csproj"
@@ -80,14 +80,14 @@
         }
       }
     },
-    "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\TBalans\\TBalans.Domain\\TBalans.Domain.csproj": {
+    "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\Tbalans\\TBalans.Domain\\TBalans.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\TBalans\\TBalans.Domain\\TBalans.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\Tbalans\\TBalans.Domain\\TBalans.Domain.csproj",
         "projectName": "TBalans.Domain",
-        "projectPath": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\TBalans\\TBalans.Domain\\TBalans.Domain.csproj",
+        "projectPath": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\Tbalans\\TBalans.Domain\\TBalans.Domain.csproj",
         "packagesPath": "C:\\Users\\KURTS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\TBalans\\TBalans.Domain\\obj\\",
+        "outputPath": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\Tbalans\\TBalans.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\KURTS\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -167,8 +167,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\TBalans\\TBalans.Domain\\TBalans.Domain.csproj": {
-                "projectPath": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\TBalans\\TBalans.Domain\\TBalans.Domain.csproj"
+              "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\Tbalans\\TBalans.Domain\\TBalans.Domain.csproj": {
+                "projectPath": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\Tbalans\\TBalans.Domain\\TBalans.Domain.csproj"
               }
             }
           }

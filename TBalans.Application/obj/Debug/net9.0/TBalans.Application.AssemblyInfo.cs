@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TBalans.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b51010f33fba7990eae01757804dfaa7918c9346")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89f63ef06a420c80bc3c06cd7000e54dee2bfc18")]
 [assembly: System.Reflection.AssemblyProductAttribute("TBalans.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TBalans.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7euxTnSsecM=",
+  "dgSpecHash": "TUwKDUjqwEc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\TBalans\\TBalans.Api\\TBalans.Api.csproj",
+  "projectFilePath": "C:\\Users\\KURTS\\OneDrive\\Desktop\\Yeni klasör\\Tbalans\\TBalans.Api\\TBalans.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\KURTS\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\KURTS\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\9.0.2\\microsoft.aspnetcore.authentication.jwtbearer.9.0.2.nupkg.sha512",
