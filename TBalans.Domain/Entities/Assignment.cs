@@ -17,12 +17,12 @@ public class Assignment
     /// <summary>
     /// Görevin başlığı
     /// </summary>
-    public string Title { get; private set; }
+    public string Title { get; private set; } = default!;
 
     /// <summary>
     /// Görevin açıklaması ve detayları
     /// </summary>
-    public string Description { get; private set; }
+    public string Description { get; private set; } = default!;
 
     /// <summary>
     /// Görevin tahmini tamamlanma süresi (Saat cinsinden)
@@ -38,7 +38,7 @@ public class Assignment
     /// <summary>
     /// Üniversite mirası (Arşivleme) için akademik yıl (Örn: "2025-2026")
     /// </summary>
-    public string AcademicYear { get; private set; }
+    public string AcademicYear { get; private set; } = default!;
 
     /// <summary>
     /// Üniversite mirası (Arşivleme) için eğitim dönemi (Güz/Bahar)

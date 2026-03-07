@@ -17,7 +17,7 @@ public class User
     /// <summary>
     /// Kullanıcının profil fotoğrafı bağlantısı
     /// </summary>
-    public string PhotoUrl { get; private set; }
+    public string PhotoUrl { get; private set; } = default!;
 
     /// <summary>
     /// Kullanıcının avatar tercihi (Harf, İkon veya Özel resim)
@@ -27,12 +27,12 @@ public class User
     /// <summary>
     /// Kullanıcının kayıtlı olduğu üniversite
     /// </summary>
-    public string University { get; private set; }
+    public string University { get; private set; } = default!;
 
     /// <summary>
     /// Kullanıcının bölümü
     /// </summary>
-    public string Department { get; private set; }
+    public string Department { get; private set; } = default!;
 
     /// <summary>
     /// Kullanıcının sistemdeki itibarı (Rozet kilitlerini açmak için)
@@ -42,7 +42,7 @@ public class User
     /// <summary>
     /// Üniversite mirası (Arşivleme) için akademik yıl (Örn: "2025-2026")
     /// </summary>
-    public string AcademicYear { get; private set; }
+    public string AcademicYear { get; private set; } = default!;
 
     /// <summary>
     /// Üniversite mirası (Arşivleme) için eğitim dönemi (Güz/Bahar)

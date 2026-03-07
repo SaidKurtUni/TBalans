@@ -19,6 +19,14 @@ public class TBalansDbContext : DbContext
     {
     }
 
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        if (!optionsBuilder.IsConfigured)
+        {
+            optionsBuilder.UseSqlite("Data Source=tbalans.db");
+        }
+    }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
@@ -29,7 +37,7 @@ public class TBalansDbContext : DbContext
             // İstenen özelliklerin veritabanında varsayılan değerleri (Fluent API Default Value)
             entity.Property(u => u.University)
                   .HasDefaultValue("Bandırma Onyedi Eylül Üniversitesi");
-            
+
             entity.Property(u => u.Department)
                   .HasDefaultValue("Yazılım Mühendisliği");
 

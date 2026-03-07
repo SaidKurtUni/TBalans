@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("TBalans.Domain")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("TBalans.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79404a07ed3999e6d9589e138aa123945620c2a9")]
-[assembly: System.Reflection.AssemblyProductAttribute("TBalans.Domain")]
-[assembly: System.Reflection.AssemblyTitleAttribute("TBalans.Domain")]
+[assembly: System.Reflection.AssemblyProductAttribute("TBalans.Infrastructure")]
+[assembly: System.Reflection.AssemblyTitleAttribute("TBalans.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // MSBuild WriteCodeFragment sınıfı tarafından oluşturuldu.
