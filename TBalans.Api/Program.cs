@@ -23,6 +23,10 @@ builder.Services.AddCors(options =>
             .WithOrigins(
                 "http://localhost:3000",                    // CRA portu (yedek)
                 "http://localhost:5173",                    // Vite (geliştirme)
+                "http://localhost:8080",                    // Capacitor dev server
+                "https://localhost",                        // Capacitor Android WebView (androidScheme: https)
+                "capacitor://localhost",                    // Capacitor native (fallback)
+                "ionic://localhost",                        // Ionic fallback
                 "https://tbalans-app-2026.web.app",        // Firebase Hosting (production)
                 "https://tbalans-app-2026.firebaseapp.com" // Firebase alternatif domain
             )
