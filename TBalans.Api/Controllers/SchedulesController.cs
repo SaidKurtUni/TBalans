@@ -34,14 +34,14 @@ public class SchedulesController : ControllerBase
             var userId = request.UserId != Guid.Empty ? request.UserId : Guid.NewGuid();
 
             var schedule = new Schedule(
+                userId: userId,
                 title: request.Title,
-                description: request.Description,
-                startTime: request.StartTime,
-                endTime: request.EndTime,
                 dayOfWeek: request.DayOfWeek,
+                startTime: request.StartTime.TimeOfDay,
+                endTime: request.EndTime.TimeOfDay,
                 isExam: request.IsExam,
                 location: request.Location,
-                userId: userId,
+                description: request.Description,
                 effectiveStartDate: request.EffectiveStartDate,
                 effectiveEndDate: request.EffectiveEndDate,
                 occursOnSpecificWeeks: request.OccursOnSpecificWeeks

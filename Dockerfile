@@ -1,5 +1,5 @@
 # ── Build aşaması ──────────────────────────────────────────────
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
 
 # Proje dosyalarını kopyala ve bağımlılıkları yükle
@@ -20,16 +20,17 @@ WORKDIR /src/TBalans.Api
 RUN dotnet publish TBalans.Api.csproj -c Release -o /app/publish --no-restore
 
 # ── Runtime aşaması ────────────────────────────────────────────
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
+FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS final
 WORKDIR /app
 
 # Derlenen dosyaları kopyala
 COPY --from=build /app/publish .
 
-# SQLite veritabanı için kalıcı klasör
+# SQLite veritabanı için kalıcı klasör oluştur
 RUN mkdir -p /app/data
 
-# Render PORT env değişkenini kullan
+# Uygulama portu — Render'dan gelen PORT env değişkenini kullanan script
+# ENV satırında $PORT kabuk değişkeni çalışmaz, bu yüzden ENTRYPOINT aracılığıyla set ediyoruz
 ENV ASPNETCORE_URLS=http://+:8080
 EXPOSE 8080
 

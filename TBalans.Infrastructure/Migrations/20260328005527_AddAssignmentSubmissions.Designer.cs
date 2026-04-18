@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TBalans.Infrastructure;
 
@@ -10,9 +11,11 @@ using TBalans.Infrastructure;
 namespace TBalans.Infrastructure.Migrations
 {
     [DbContext(typeof(TBalansDbContext))]
-    partial class TBalansDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260328005527_AddAssignmentSubmissions")]
+    partial class AddAssignmentSubmissions
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.2");
@@ -165,6 +168,12 @@ namespace TBalans.Infrastructure.Migrations
                     b.Property<double?>("EstimatedHours")
                         .HasColumnType("REAL");
 
+                    b.Property<string>("FaqData")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ImportantNotes")
+                        .HasColumnType("TEXT");
+
                     b.Property<bool>("IsCompleted")
                         .HasColumnType("INTEGER");
 
@@ -253,6 +262,45 @@ namespace TBalans.Infrastructure.Migrations
                         .IsUnique();
 
                     b.ToTable("AssignmentCompletions");
+                });
+
+            modelBuilder.Entity("TBalans.Domain.Entities.AssignmentSubmission", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("AssignmentId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("FileUrl")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("MethodDescription")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ResultSummary")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("StudentId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ToolsUsed")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AssignmentId");
+
+                    b.HasIndex("StudentId");
+
+                    b.ToTable("AssignmentSubmissions");
                 });
 
             modelBuilder.Entity("TBalans.Domain.Entities.Group", b =>
@@ -344,13 +392,7 @@ namespace TBalans.Infrastructure.Migrations
                     b.Property<double?>("EstimatedHours")
                         .HasColumnType("REAL");
 
-                    b.Property<string>("FaqData")
-                        .HasColumnType("TEXT");
-
                     b.Property<Guid>("GroupId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("ImportantNotes")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("StudentNotes")
@@ -372,45 +414,6 @@ namespace TBalans.Infrastructure.Migrations
                     b.HasIndex("GroupId");
 
                     b.ToTable("GroupAssignments");
-                });
-
-            modelBuilder.Entity("TBalans.Domain.Entities.GroupAssignmentSubmission", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("FileUrl")
-                        .HasColumnType("TEXT");
-
-                    b.Property<Guid>("GroupAssignmentId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("MethodDescription")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("ResultSummary")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<Guid>("StudentId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("ToolsUsed")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("GroupAssignmentId");
-
-                    b.HasIndex("StudentId");
-
-                    b.ToTable("GroupAssignmentSubmissions");
                 });
 
             modelBuilder.Entity("TBalans.Domain.Entities.GroupMember", b =>
@@ -689,6 +692,25 @@ namespace TBalans.Infrastructure.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("TBalans.Domain.Entities.AssignmentSubmission", b =>
+                {
+                    b.HasOne("TBalans.Domain.Entities.Assignment", "Assignment")
+                        .WithMany("Submissions")
+                        .HasForeignKey("AssignmentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("TBalans.Domain.Entities.User", "Student")
+                        .WithMany()
+                        .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Assignment");
+
+                    b.Navigation("Student");
+                });
+
             modelBuilder.Entity("TBalans.Domain.Entities.Group", b =>
                 {
                     b.HasOne("TBalans.Domain.Entities.User", "CreatedBy")
@@ -717,25 +739,6 @@ namespace TBalans.Infrastructure.Migrations
                     b.Navigation("CreatedBy");
 
                     b.Navigation("Group");
-                });
-
-            modelBuilder.Entity("TBalans.Domain.Entities.GroupAssignmentSubmission", b =>
-                {
-                    b.HasOne("TBalans.Domain.Entities.GroupAssignment", "GroupAssignment")
-                        .WithMany("Submissions")
-                        .HasForeignKey("GroupAssignmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("TBalans.Domain.Entities.User", "Student")
-                        .WithMany()
-                        .HasForeignKey("StudentId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("GroupAssignment");
-
-                    b.Navigation("Student");
                 });
 
             modelBuilder.Entity("TBalans.Domain.Entities.GroupMember", b =>
@@ -768,6 +771,11 @@ namespace TBalans.Infrastructure.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("TBalans.Domain.Entities.Assignment", b =>
+                {
+                    b.Navigation("Submissions");
+                });
+
             modelBuilder.Entity("TBalans.Domain.Entities.Group", b =>
                 {
                     b.Navigation("Members");
@@ -778,8 +786,6 @@ namespace TBalans.Infrastructure.Migrations
                     b.Navigation("Comments");
 
                     b.Navigation("Completions");
-
-                    b.Navigation("Submissions");
                 });
 
             modelBuilder.Entity("TBalans.Domain.Entities.User", b =>

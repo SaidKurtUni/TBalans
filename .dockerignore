@@ -1,0 +1,34 @@
+# Node.js bağımlılıkları (frontend için)
+node_modules/
+tbalans-frontend/node_modules/
+
+# .NET build çıktıları
+**/bin/
+**/obj/
+
+# Git metadata
+.git/
+.gitignore
+
+# IDE ve editör dosyaları
+.vs/
+.vscode/
+*.user
+*.suo
+
+# Log ve hata dosyaları
+*.log
+*.txt
+build_errors.txt
+errors.txt
+
+# Docker related
+.dockerignore
+Dockerfile
+
+# Test çıktıları
+**/TestResults/
+
+# Geçici dosyalar
+**/*.tmp
+**/*.bak

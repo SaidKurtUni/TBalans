@@ -31,6 +31,11 @@ public class User : IdentityUser<Guid>
     public string? Department { get; set; }
 
     /// <summary>
+    /// Kullanıcının sınıf bilgisi (Örn: "1", "2", "3", "4", "5+")
+    /// </summary>
+    public string? Grade { get; set; }
+
+    /// <summary>
     /// Kullanıcının sistemdeki itibarı (Rozet kilitlerini açmak için)
     /// </summary>
     public int KarmaPoints { get; set; }
@@ -44,6 +49,16 @@ public class User : IdentityUser<Guid>
     /// Üniversite mirası (Arşivleme) için eğitim dönemi (Güz/Bahar)
     /// </summary>
     public int Semester { get; set; }
+
+    /// <summary>
+    /// Kullanıcının sahip olduğu görevler (One-to-Many)
+    /// </summary>
+    public virtual ICollection<Assignment> Assignments { get; set; } = new List<Assignment>();
+
+    /// <summary>
+    /// Kullanıcının sahip olduğu ders programı (One-to-Many)
+    /// </summary>
+    public virtual ICollection<Schedule> Schedules { get; set; } = new List<Schedule>();
 
     // Parametresiz kurucu metot (ORM araçları için)
     protected User() { }
@@ -70,11 +85,21 @@ public class User : IdentityUser<Guid>
     /// Kullanıcının karma puanını günceller.
     /// İş kuralı: Karma puanı asla negatif olamaz.
     /// </summary>
-    /// <param name="pointsToAdd">Eklenecek veya çıkarılacak puan (negatif değer alabilir)</param>
     public void UpdateKarma(int pointsToAdd)
     {
         KarmaPoints += pointsToAdd;
         if (KarmaPoints < 0)
             KarmaPoints = 0;
+    }
+
+    /// <summary>
+    /// Kullanıcı profil bilgilerini günceller (Alan seviyesinde enkapsülasyon).
+    /// </summary>
+    public void UpdateProfile(string? university, string? department, string? grade, string? academicYear)
+    {
+        if (!string.IsNullOrWhiteSpace(university))   University   = university;
+        if (!string.IsNullOrWhiteSpace(department))   Department   = department;
+        if (!string.IsNullOrWhiteSpace(grade))        Grade        = grade;
+        if (!string.IsNullOrWhiteSpace(academicYear)) AcademicYear = academicYear;
     }
 }
