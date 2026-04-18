@@ -1,0 +1,31 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+*.db
+*.db-shm
+*.db-wal
+
+# Node.js
+node_modules/
+dist/
+.env
+.env.local
+.env.production
+
+# Build outputs
+build_errors.txt
+build_outputs.txt
+domain_err.txt
+errors.txt
+gradle_output*.txt
+
+# IDE
+.idea/
+.vscode/
+
+# Android
+tbalans-frontend/android/.gradle/
+tbalans-frontend/android/app/build/
