@@ -25,7 +25,8 @@ public class AssignmentService : IAssignmentService
             throw new ArgumentNullException(nameof(assignment));
 
         // Kural: Şu anki zaman + Tahmini Süre > Teslim Tarihi ise ödevi 'Kritik' olarak işaretle
-        var estimatedCompletionTime = DateTime.UtcNow.AddHours(assignment.EstimatedHours);
+        // EstimatedHours nullable olduğu için ?? 0 ile güvenli dönüşüm yapıyoruz
+        var estimatedCompletionTime = DateTime.UtcNow.AddHours(assignment.EstimatedHours ?? 0);
 
         return estimatedCompletionTime > assignment.DueDate;
     }
@@ -66,7 +67,8 @@ public class AssignmentService : IAssignmentService
 
             // Akıllı Dönüştürücü (Smart Converter): 
             // Görevin başlangıç tarihini Teslim Tarihinden Tahmini Süreyi çıkararak buluyoruz (Geriye dönük hesaplama)
-            var startDate = assignment.DueDate.AddHours(-assignment.EstimatedHours);
+            // EstimatedHours nullable olduğu için ?? 0 ile güvenli dönüşüm yapıyoruz
+            var startDate = assignment.DueDate.AddHours(-(assignment.EstimatedHours ?? 0));
 
             // Json tabanlı UI için verileri haritalıyoruz (mapping)
             calendarEvents.Add(new DTOs.CalendarEventDto
