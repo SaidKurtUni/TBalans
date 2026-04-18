@@ -15,6 +15,23 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllers();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("ReactApp", policy =>
+    {
+        policy
+            .WithOrigins(
+                "http://localhost:3000",                    // CRA portu (yedek)
+                "http://localhost:5173",                    // Vite (geliştirme)
+                "https://tbalans-app-2026.web.app",        // Firebase Hosting (production)
+                "https://tbalans-app-2026.firebaseapp.com" // Firebase alternatif domain
+            )
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowCredentials();
+    });
+});
+
 // Swagger/OpenAPI ayarları
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
@@ -24,6 +41,31 @@ builder.Services.AddSwaggerGen(options =>
         Title = "TBalans API",
         Version = "v1",
         Description = "Web API for TBalans Assignment and Calendar Management"
+    });
+
+    options.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = Microsoft.OpenApi.Models.SecuritySchemeType.ApiKey,
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        In = Microsoft.OpenApi.Models.ParameterLocation.Header,
+        Description = "Lütfen Bearer [boşluk] {token} formatında JWT girin. Örnek: \"Bearer eyJhbGci...\""
+    });
+
+    options.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
+    {
+        {
+            new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+            {
+                Reference = new Microsoft.OpenApi.Models.OpenApiReference
+                {
+                    Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            Array.Empty<string>()
+        }
     });
 });
 
@@ -66,16 +108,24 @@ app.UseDeveloperExceptionPage();
 
 // Configure the HTTP request pipeline.
 
-
 app.UseSwagger();
 app.UseSwaggerUI();
 
+// CORS en önce gelmelil - UseHttpsRedirection'dan önce!
+app.UseCors("ReactApp");
 
-app.UseHttpsRedirection();
+// Sadece production ortamında HTTPS yönlendirmesi yap (dev'de CORS sorununa neden olur)
+if (!app.Environment.IsDevelopment())
+{
+    app.UseHttpsRedirection();
+}
 
 // Yetkilendirme middleware'leri (Sıralama önemlidir!)
 app.UseAuthentication();
 app.UseAuthorization();
+
+// Statik dosyaları ( wwwroot/uploads ) serve et
+app.UseStaticFiles();
 
 app.MapControllers();
 
